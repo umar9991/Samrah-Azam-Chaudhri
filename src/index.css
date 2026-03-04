@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* HSL conversions for the palette */
+  /* Deep Blue #1a237e -> 235 66% 30% */
+  /* Gold #ffd700 -> 51 100% 50% */
+  
+  --background: 210 20% 98%;
+  --foreground: 235 66% 15%; /* Darker deep blue for text */
+
+  --primary: 235 66% 30%; /* #1a237e */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 51 100% 50%; /* #ffd700 */
+  --secondary-foreground: 235 66% 30%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 51 100% 95%; /* Very light gold */
+  --accent-foreground: 235 66% 30%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 235 66% 30%;
+
+  --radius: 0.5rem;
+  
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+.dark {
+  --background: 235 40% 10%;
+  --foreground: 210 40% 98%;
+
+  --primary: 235 66% 40%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 51 100% 50%;
+  --secondary-foreground: 235 66% 30%;
+
+  --muted: 235 30% 20%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 235 40% 20%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 235 30% 20%;
+  --input: 235 30% 20%;
+  --ring: 51 100% 50%;
+}
+
+/* Tailwind v4: map CSS vars to utilities (bg-background, text-foreground, etc.) */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--background));
+  --color-card-border: hsl(var(--border));
+  --color-card-foreground: hsl(var(--foreground));
+  --color-ring-offset-background: hsl(var(--background));
+  --radius-default: var(--radius);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Custom Utilities */
+.text-gold {
+  color: hsl(var(--secondary));
+}
+
+.bg-gold {
+  background-color: hsl(var(--secondary));
+}
+
+.text-deep-blue {
+  color: hsl(var(--primary));
+}
+
+.bg-deep-blue {
+  background-color: hsl(var(--primary));
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
