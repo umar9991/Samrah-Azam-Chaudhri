@@ -69,9 +69,9 @@ export default function Home() {
           style={{ maxWidth: "min(70vw, 600px)", maxHeight: "min(70vh, 500px)", margin: "auto" }}
         />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-background/70 to-transparent pointer-events-none -z-10" />
-        
+
         <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">Azam Chaudhri</span>
               </h1>
             </div>
-            
+
             <p className="text-xl md:text-2xl font-light text-muted-foreground max-w-lg leading-relaxed border-l-4 border-secondary pl-6">
               International Management Consultant, Corporate Trainer & Entrepreneur
             </p>
@@ -96,24 +96,24 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button 
+              <Button
                 asChild
-                size="lg" 
+                size="lg"
                 className="rounded-full bg-primary hover:bg-primary/90 text-white px-8 h-12 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
               >
                 <a href="/about">About</a>
               </Button>
-              <Button 
+              <Button
                 onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-                size="lg" 
+                size="lg"
                 className="rounded-full bg-primary hover:bg-primary/90 text-white px-8 h-12 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
               >
                 View Projects
               </Button>
-              <Button 
+              <Button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                variant="outline" 
-                size="lg" 
+                variant="outline"
+                size="lg"
                 className="rounded-full border-2 border-primary text-primary hover:bg-primary/5 px-8 h-12 text-base font-semibold"
               >
                 Contact
@@ -121,75 +121,75 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-             <div className="relative z-10 w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white bg-white">
-                <div className="w-full aspect-4/3 p-8 flex flex-col justify-between bg-linear-to-br from-white via-white to-secondary/10">
-                  <div>
-                    <p className="text-xs font-extrabold tracking-widest text-primary/70 uppercase">Initiatives</p>
-                    <h3 className="mt-2 text-2xl font-bold font-heading text-primary leading-tight">
-                      Projects that drive impact
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      A snapshot of organizations and ventures.
-                    </p>
-                  </div>
-
-                  <div className="mt-6 grid grid-cols-3 gap-4 items-center">
-                    {[
-                      { src: "/logos/vigo-business-consulting.png", alt: "Vigo Business Consulting" },
-                      { src: "/logos/vigo-entrepreneurship.png", alt: "Vigo Entrepreneurship Centre" },
-                      { src: "/logos/humanity-indeed.png", alt: "Humanity Indeed" },
-                      { src: "/logos/kids-nest.png", alt: "Kids Nest Pakistan" },
-                      { src: "/logos/womens-health-care.png", alt: "Women's Health Care Pakistan Forum" },
-                      { src: "/logos/international-business.png", alt: "International Business Project" },
-                    ].map((logo) => (
-                      <div
-                        key={logo.src}
-                        className="h-16 rounded-xl border border-border/60 bg-white/80 shadow-sm flex items-center justify-center p-3"
-                      >
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          loading="lazy"
-                          decoding="async"
-                          className="max-h-full max-w-full object-contain"
-                          onError={() => setHeroImgError(true)}
-                        />
-                      </div>
-                    ))}
-                  </div>
+            <div className="relative z-10 w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white bg-white">
+              <div className="w-full aspect-4/3 p-8 flex flex-col justify-between bg-linear-to-br from-white via-white to-secondary/10">
+                <div>
+                  <p className="text-xs font-extrabold tracking-widest text-primary/70 uppercase">Initiatives</p>
+                  <h3 className="mt-2 text-2xl font-bold font-heading text-primary leading-tight">
+                    Projects that drive impact
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    A snapshot of organizations and ventures.
+                  </p>
                 </div>
-                {/* Floating Badges */}
-                <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-xl border border-border/50 flex items-center gap-3"
-                >
-                  <div className="bg-secondary/20 p-2 rounded-lg text-primary"><Award size={24} /></div>
-                  <div>
-                    <p className="text-xs text-muted-foreground font-bold uppercase">Experience</p>
-                    <p className="font-bold text-primary">15+ Years</p>
-                  </div>
-                </motion.div>
 
-                <motion.div 
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -left-8 bottom-1/3 bg-white p-4 rounded-xl shadow-xl border border-border/50 flex items-center gap-3"
-                >
-                  <div className="bg-secondary/20 p-2 rounded-lg text-primary"><Users size={24} /></div>
-                  <div>
-                    <p className="text-xs text-muted-foreground font-bold uppercase">Clients</p>
-                    <p className="font-bold text-primary">Global Reach</p>
-                  </div>
-                </motion.div>
-             </div>
-             <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-3xl -z-10 translate-y-10 scale-95" />
+                <div className="mt-6 grid grid-cols-3 gap-4 items-center">
+                  {[
+                    { src: "/logos/vigo-business-consulting.png", alt: "Vigo Business Consulting" },
+                    { src: "/logos/vigo-entrepreneurship.png", alt: "Vigo Entrepreneurship Centre" },
+                    { src: "/logos/humanity-indeed.png", alt: "Humanity Indeed" },
+                    { src: "/logos/kids-nest.png", alt: "Kids Nest Pakistan" },
+                    { src: "/logos/womens-health-care.png", alt: "Women's Health Care Pakistan Forum" },
+                    { src: "/logos/international-business.png", alt: "International Business Project" },
+                  ].map((logo) => (
+                    <div
+                      key={logo.src}
+                      className="h-16 rounded-xl border border-border/60 bg-white/80 shadow-sm flex items-center justify-center p-3"
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="max-h-full max-w-full object-contain"
+                        onError={() => setHeroImgError(true)}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Floating Badges */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-xl border border-border/50 flex items-center gap-3"
+              >
+                <div className="bg-secondary/20 p-2 rounded-lg text-primary"><Award size={24} /></div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-bold uppercase">Experience</p>
+                  <p className="font-bold text-primary">15+ Years</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -left-8 bottom-1/3 bg-white p-4 rounded-xl shadow-xl border border-border/50 flex items-center gap-3"
+              >
+                <div className="bg-secondary/20 p-2 rounded-lg text-primary"><Users size={24} /></div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-bold uppercase">Clients</p>
+                  <p className="font-bold text-primary">Global Reach</p>
+                </div>
+              </motion.div>
+            </div>
+            <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-3xl -z-10 translate-y-10 scale-95" />
           </motion.div>
         </div>
       </section>
@@ -219,13 +219,13 @@ export default function Home() {
           <SectionHeader title="Articles & Publications" subtitle="Sharing knowledge and insights on management and entrepreneurship." />
 
           {articlesLoading ? (
-             <div className="flex justify-center py-12">
-               <Loader2 className="animate-spin text-primary w-8 h-8" />
-             </div>
+            <div className="flex justify-center py-12">
+              <Loader2 className="animate-spin text-primary w-8 h-8" />
+            </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {articles?.map((article, idx) => (
-                <motion.a 
+                <motion.a
                   key={article.id}
                   href={article.url}
                   target="_blank"
@@ -242,8 +242,12 @@ export default function Home() {
                     <h4 className="font-bold text-foreground group-hover:text-primary transition-colors line-clamp-1">{article.title}</h4>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
                       <span>{article.platform}</span>
-                      <span>•</span>
-                      <span>{new Date(article.publishedAt || '').toLocaleDateString()}</span>
+                      {article.publishedAt && (
+                        <>
+                          <span>•</span>
+                          <span>{new Date(article.publishedAt).toLocaleDateString()}</span>
+                        </>
+                      )}
                     </div>
                   </div>
                   <ArrowRight className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" size={18} />
@@ -260,86 +264,86 @@ export default function Home() {
           <SectionHeader title="Get In Touch" subtitle="Let's discuss how we can collaborate and create impact together." />
 
           <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-border/50 p-8 md:p-12">
-             <Form {...form}>
-               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   <FormField
-                     control={form.control}
-                     name="name"
-                     render={({ field }) => (
-                       <FormItem>
-                         <FormLabel className="text-foreground font-semibold">Name <span className="text-destructive">*</span></FormLabel>
-                         <FormControl>
-                           <Input placeholder="Your Name" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
-                         </FormControl>
-                         <FormMessage />
-                       </FormItem>
-                     )}
-                   />
-                   <FormField
-                     control={form.control}
-                     name="email"
-                     render={({ field }) => (
-                       <FormItem>
-                         <FormLabel className="text-foreground font-semibold">Email <span className="text-destructive">*</span></FormLabel>
-                         <FormControl>
-                           <Input placeholder="your@email.com" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
-                         </FormControl>
-                         <FormMessage />
-                       </FormItem>
-                     )}
-                   />
-                 </div>
-                 
-                 <FormField
-                   control={form.control}
-                   name="subject"
-                   render={({ field }) => (
-                     <FormItem>
-                       <FormLabel className="text-foreground font-semibold">Subject</FormLabel>
-                       <FormControl>
-                         <Input placeholder="Collaboration Opportunity" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
-                       </FormControl>
-                       <FormMessage />
-                     </FormItem>
-                   )}
-                 />
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-semibold">Name <span className="text-destructive">*</span></FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Name" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-semibold">Email <span className="text-destructive">*</span></FormLabel>
+                        <FormControl>
+                          <Input placeholder="your@email.com" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-                 <FormField
-                   control={form.control}
-                   name="message"
-                   render={({ field }) => (
-                     <FormItem>
-                       <FormLabel className="text-foreground font-semibold">Message <span className="text-destructive">*</span></FormLabel>
-                       <FormControl>
-                         <Textarea 
-                           placeholder="How can I help you?" 
-                           className="min-h-[150px] bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl resize-none" 
-                           {...field} 
-                         />
-                       </FormControl>
-                       <FormMessage />
-                     </FormItem>
-                   )}
-                 />
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground font-semibold">Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Collaboration Opportunity" className="h-12 bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                 <Button 
-                   type="submit" 
-                   disabled={contactMutation.isPending}
-                   className="w-full h-14 text-lg rounded-xl bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
-                 >
-                   {contactMutation.isPending ? (
-                     <>
-                       <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...
-                     </>
-                   ) : (
-                     <>
-                       Send Message <Send className="ml-2 h-5 w-5" />
-                     </>
-                   )}
-                 </Button>
-               </form>
-             </Form>
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground font-semibold">Message <span className="text-destructive">*</span></FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="How can I help you?"
+                          className="min-h-[150px] bg-muted/20 border-border focus:border-primary focus:ring-primary/10 rounded-xl resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  disabled={contactMutation.isPending}
+                  className="w-full h-14 text-lg rounded-xl bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                >
+                  {contactMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message <Send className="ml-2 h-5 w-5" />
+                    </>
+                  )}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
       </section>
