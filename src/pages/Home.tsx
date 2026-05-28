@@ -13,6 +13,7 @@ import { useContactSubmit } from "@/hooks/use-contact";
 import { Navigation } from "@/components/Navigation";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
+import { EventSlider } from "@/components/EventSlider";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -194,21 +195,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
+      {/* PROJECTS & INITIATIVES SECTION - Now Combined with Events */}
       <section id="projects" className="section-padding bg-muted/30">
         <div className="container-custom">
-          <SectionHeader title="Projects & Initiatives" subtitle="Exploring ventures that drive change and innovation." />
+          <SectionHeader title="Projects, Initiatives & Events" subtitle="A showcase of ventures, organizations, and professional achievements." />
 
           {projectsLoading ? (
             <div className="flex justify-center py-20">
               <Loader2 className="animate-spin text-primary w-10 h-10" />
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects?.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
-              ))}
-            </div>
+            <>
+              {/* Slider View - Unified Projects & Events */}
+              <div className="mb-12">
+                <EventSlider
+                  slides={
+                    projects?.map((project) => ({
+                      id: project.id,
+                      imageUrl: project.imageUrl || "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop",
+                      title: project.title,
+                      description: project.description,
+                      facebookUrl: project.facebookUrl,
+                      category: project.category,
+                    })) || []
+                  }
+                  autoPlayInterval={5000}
+                />
+              </div>
+
+              {/* Grid View - Additional Details */}
+              <div className="mt-16">
+                <h3 className="text-2xl font-bold text-primary mb-8 text-center">All Initiatives</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {projects?.map((project, index) => (
+                    <ProjectCard key={project.id} project={project} index={index} />
+                  ))}
+                </div>
+              </div>
+            </>
           )}
         </div>
       </section>

@@ -31,11 +31,11 @@ export const STATIC_PROJECTS: Project[] = [
     {
         id: "4",
         title: "Premier Professional Interior & Exterior Designers",
-        description: "Quality, speed and affordability in design.",
+        description: "Quality, speed and affordability in design.",                                 
         facebookUrl: "https://www.facebook.com/share/1D7mdMEQ1D/",
         category: "Design",
         isFeatured: false,
-        imageUrl: "/logos/premier-professional.png",
+        imageUrl: "/logos/premier-professional.png", 
     },
     {
         id: "5",

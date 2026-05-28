@@ -28,9 +28,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     >
       {/* Background/Image Area - logos use object-contain to avoid blur from scaling */}
       <div className={`relative h-48 ${project.isFeatured ? 'md:h-64' : ''} overflow-hidden bg-white`}>
-        {showImage ? (
+        {showImage ? (    
           <img 
-            src={project.imageUrl!} 
+            src={project.imageUrl!}   
             alt={project.title} 
             className="w-full h-full object-contain p-3 transition-transform duration-700 group-hover:scale-[1.02]"
             loading="lazy"
