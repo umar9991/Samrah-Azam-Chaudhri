@@ -113,7 +113,7 @@ export function EventSlider({ slides, autoPlayInterval = 4000 }: EventSliderProp
               <img
                 src={slides[currentIndex].imageUrl}
                 alt={slides[currentIndex].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-black"
                 loading="lazy"
                 decoding="async"
               />

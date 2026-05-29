@@ -9,6 +9,7 @@ import type { InsertContact } from "@shared/schema";
 import { useProjects } from "@/hooks/use-projects";
 import { useArticles } from "@/hooks/use-articles";
 import { useContactSubmit } from "@/hooks/use-contact";
+import { GALLERY_EVENTS } from "@/data/static-data";
 
 import { Navigation } from "@/components/Navigation";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -234,6 +235,18 @@ export default function Home() {
               </div>
             </>
           )}
+        </div>
+      </section>
+
+      {/* GALLERY & EVENTS SECTION */}
+      <section id="gallery" className="section-padding bg-white">
+        <div className="container-custom">
+          <SectionHeader title="Gallery & Professional Events" subtitle="Professional milestones, training sessions, and academic achievements." />
+
+          <EventSlider
+            slides={GALLERY_EVENTS}
+            autoPlayInterval={5000}
+          />
         </div>
       </section>
 

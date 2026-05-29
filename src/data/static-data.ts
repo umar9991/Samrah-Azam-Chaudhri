@@ -111,3 +111,42 @@ export const STATIC_ARTICLES: Article[] = [
         publishedAt: undefined,
     },
 ];
+
+// Gallery/Events Slider Data
+export const GALLERY_EVENTS = [
+    {
+        id: "event-1",
+        imageUrl: "/Don't give up the beginning, IS ALWAYS the hardest.jpeg",
+        title: "Motivational Leadership",
+        description: "Inspiring journey and resilience in professional development. Don't give up - the beginning is always the hardest.",
+        category: "Inspiration",
+    },
+    {
+        id: "event-2",
+        imageUrl: "/This is at NUST open House. I represented my department development studies as a PhD. student of NUST..jpeg",
+        title: "NUST Open House - PhD Presentation",
+        description: "Representing department development studies and academic initiatives at NUST as a PhD student.",
+        category: "Education",
+    },
+    {
+        id: "event-3",
+        imageUrl: "/This is at NUST open House. I represented my department development studies as a PhD. student of NUST.jpeg",
+        title: "NUST Academic Forum",
+        description: "Engaging with the academic community and sharing development studies insights at NUST.",
+        category: "Academia",
+    },
+    {
+        id: "event-4",
+        imageUrl: "/This is my most recent training I delivered at POFIT  for promotional staff training  from 18 different factories .i.jpeg",
+        title: "POFIT Promotional Staff Training",
+        description: "Delivered comprehensive training to promotional staff from 18 different factories for professional development and skills enhancement.",
+        category: "Training",
+    },
+    {
+        id: "event-5",
+        imageUrl: "/This training I delivered at a medical college to  all medical doctors and MBBS House Officers.jpeg",
+        title: "Medical College Training Session",
+        description: "Professional development training delivered to all medical doctors and MBBS House Officers focusing on management and leadership.",
+        category: "Healthcare",
+    },
+];
