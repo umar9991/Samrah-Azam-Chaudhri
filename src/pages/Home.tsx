@@ -94,7 +94,7 @@ export default function Home() {
             </p>
 
             <p className="text-base text-muted-foreground/80 max-w-md">
-              Director/CEO of Vigo Business Consulting, Co-founder of Cherished Foundation, and President of Center of Entrepreneurship.
+              Director/CEO  Vigo Consulting Private Limited Previously Known as Vigo Business Consulting
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
