@@ -94,11 +94,11 @@ export default function Home() {
             </p>
 
             <p className="text-base text-muted-foreground/80 max-w-md">
-              Director/CEO  Vigo Consulting Private Limited Previously Known as Vigo Business Consulting
+              Director/CEO, Vigo Consulting Private Limited
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button
+              <Button  
                 asChild
                 size="lg"
                 className="rounded-full bg-primary hover:bg-primary/90 text-white px-8 h-12 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all"
@@ -143,7 +143,7 @@ export default function Home() {
 
                 <div className="mt-6 grid grid-cols-3 gap-4 items-center">
                   {[
-                    { src: "/logos/vigo-business-consulting.png", alt: "Vigo Business Consulting" },
+                    { src: "/logos/vigo-consulting.png", alt: "Vigo Consulting Private Limited" },
                     { src: "/logos/vigo-entrepreneurship.png", alt: "Vigo Entrepreneurship Centre" },
                     { src: "/logos/humanity-indeed.png", alt: "Humanity Indeed" },
                     { src: "/logos/kids-nest.png", alt: "Kids Nest Pakistan" },
@@ -217,6 +217,8 @@ export default function Home() {
                       title: project.title,
                       description: project.description,
                       facebookUrl: project.facebookUrl,
+                      appUrl: project.appUrl,
+                      appLabel: project.appLabel,
                       category: project.category,
                     })) || []
                   }

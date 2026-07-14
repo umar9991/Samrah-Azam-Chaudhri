@@ -8,6 +8,8 @@ export interface EventSlide {
   title: string;
   description?: string;
   facebookUrl?: string;
+  appUrl?: string | null;
+  appLabel?: string | null;
   category?: string;
 }
 
@@ -144,15 +146,18 @@ export function EventSlider({ slides, autoPlayInterval = 4000 }: EventSliderProp
                       {slides[currentIndex].description}
                     </p>
                   )}
-                  {slides[currentIndex].facebookUrl && (
+                  {(slides[currentIndex].appUrl || slides[currentIndex].facebookUrl) && (
                     <motion.a
-                      href={slides[currentIndex].facebookUrl}
+                      href={slides[currentIndex].appUrl || slides[currentIndex].facebookUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ x: 4 }}
                       className="inline-flex items-center gap-2 text-white hover:text-secondary transition-colors text-sm font-semibold mt-2"
                     >
-                      Learn More <ExternalLink size={16} />
+                      {slides[currentIndex].appUrl
+                        ? (slides[currentIndex].appLabel || "Open App")
+                        : "Learn More"}{" "}
+                      <ExternalLink size={16} />
                     </motion.a>
                   )}
                 </motion.div>

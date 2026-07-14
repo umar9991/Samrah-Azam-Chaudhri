@@ -6,6 +6,9 @@ export const projectSchema = z.object({
   title: z.string(),
   description: z.string(),
   facebookUrl: z.string().nullable().optional(),
+  /** Live app URL (e.g. BloodFlow Manager for Humanity Indeed) */
+  appUrl: z.string().nullable().optional(),
+  appLabel: z.string().nullable().optional(),
   category: z.string().default("General"),
   isFeatured: z.boolean().default(false),
   imageUrl: z.string().nullable().optional(),
@@ -33,6 +36,8 @@ export const insertProjectSchema = z.object({
   title: z.string(),
   description: z.string(),
   facebookUrl: z.string().nullable().optional(),
+  appUrl: z.string().nullable().optional(),
+  appLabel: z.string().nullable().optional(),
   category: z.string().default("General"),
   isFeatured: z.boolean().default(false),
   imageUrl: z.string().nullable().optional(),

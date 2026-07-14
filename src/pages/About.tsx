@@ -5,7 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const roles = [
-  { title: "Director / CEO", org: "VIGO Business Consulting Private Limited", icon: Award },
+  { title: "Director / CEO", org: "Vigo Consulting Private Limited", icon: Award },
   { title: "Co-Founder", org: "Cherished Foundation", icon: HandHeart },
   { title: "President", org: "Center of Entrepreneurship", icon: Users },
   { title: "Global Advisor", org: "Global Chamber", icon: Globe },
@@ -59,7 +59,7 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  I am Samrah Azam Chaudhri, a multifaceted professional serving as an International Management Consultant, Corporate Trainer, and Entrepreneur. I hold the position of Director and CEO at <strong className="text-primary">VIGO Business Consulting Private Limited</strong>, where we drive business transformation and impact-focused global management training and development consulting.
+                  I am Samrah Azam Chaudhri, a multifaceted professional serving as an International Management Consultant, Corporate Trainer, and Entrepreneur. I hold the position of Director and CEO at <strong className="text-primary">Vigo Consulting Private Limited</strong>, where we drive business transformation and impact-focused global management training and development consulting.
                 </p>
                 <p>
                   My commitment to social impact led me to co-found the <strong className="text-primary">Cherished Foundation</strong>, dedicated to uplifting underprivileged communities. As President of the <strong className="text-primary">Center of Entrepreneurship</strong>, I mentor the next generation of business leaders and support innovation ecosystems.

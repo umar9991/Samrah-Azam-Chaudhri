@@ -61,16 +61,28 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.description}
         </p>
         
-        {project.facebookUrl && (
-          <a
-            href={project.facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors"
-          >
-            Visit Facebook Page <ExternalLink size={16} />
-          </a>
-        )}
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          {project.appUrl && (
+            <a
+              href={project.appUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+            >
+              {project.appLabel || "Open App"} <ExternalLink size={16} />
+            </a>
+          )}
+          {project.facebookUrl && (
+            <a
+              href={project.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors"
+            >
+              Visit Facebook Page <ExternalLink size={16} />
+            </a>
+          )}
+        </div>
       </div>
     </motion.div>
   );
