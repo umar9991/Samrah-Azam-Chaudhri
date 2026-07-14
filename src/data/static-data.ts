@@ -6,8 +6,7 @@ export const STATIC_PROJECTS: Project[] = [
         title: "Humanity Indeed",
         description: "CSR initiative by Mrs. Samrah Azam focused on societal development—including the BloodFlow blood bank manager for connecting donors and saving lives.",
         facebookUrl: "https://www.facebook.com/share/1Bzk4Df4Mo/",
-        // Replace with Railway/Render URL after BloodFlow deploy
-        appUrl: import.meta.env.VITE_BLOODFLOW_URL || "https://bloodflow-manager.up.railway.app",
+        appUrl: import.meta.env.VITE_BLOODFLOW_URL || "https://blood-bank-zeta-eight.vercel.app",
         appLabel: "Open Blood Bank App",
         category: "Non-Profit",
         isFeatured: true,
